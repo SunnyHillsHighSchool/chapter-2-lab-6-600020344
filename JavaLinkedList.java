@@ -24,29 +24,48 @@ public class JavaLinkedList
  public double getSum(  )
  {
   double total=0;
+  for (int i: list)
+  {
+    total+=i;
+  }
   return total;
  }
 
  public double getAvg(  )
  {
-  return 0;
+  double total=0;
+  for (int i: list)
+  {
+    total+=i;
+  }
+  return total/list.size();
  }
 
  public int getLargest()
  {
   int largest=Integer.MIN_VALUE;
+  for (int i: list)
+  {
+    if (i>largest)
+      largest = i;
+  }
   return largest;
  }
 
  public int getSmallest()
  {
   int smallest = smallest=Integer.MAX_VALUE;
+  for (int i: list)
+  {
+    if (i<smallest)
+      smallest = i;
+  }
   return smallest;
  }
 
  public String toString()
  {
-  String output="";
+  String output= "SUM:: " + getSum() + "\n" + "AVERAGE:: " + getAvg() + "\n" + "SMALLEST:: " + getSmallest() + "\n" + "LARGEST:: " + getLargest();
   return output;
  }
 }
